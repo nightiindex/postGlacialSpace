@@ -1,0 +1,391 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#homepage {
+    background-color: #9966ff;
+}
+
+#portal {
+    background-color:seagreen;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#foyer a{
+ font-family: 'Notable', sans-serif;
+ color: #ffffff;
+ font-size: 4em;
+}
+
+#foyer a:hover{
+    color: #2ECC71;
+}
+
+#outsideworld a{
+    font-family: monospace, sans-serif;
+    color: #2ECC71;
+    font-size: 1em;
+    padding-left: 16px;
+}
+
+#outsideworld a:hover{
+    color: white;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+/* index.html 3DCube Transform*/
+
+
+#cube {
+  margin: auto;
+  position: relative;
+  height: 400px;
+  width: 400px;
+  transform-style: preserve-3d;
+}
+
+#cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}
+
+#cube .front {
+    background-image: url(../images/postglacial3d-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+}
+#cube .back {
+    background-image: url(../images/postglacial3d-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+#cube .right {
+    background-image: url(../images/postglacial3d-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+}
+#cube .left {
+    background-image: url(../images/postglacial3d-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+#cube .top {
+    background-image: url(../images/postglacial3d-5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+}
+#cube .bottom {
+    background-image: url(../images/postglacial3d-6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+.front {
+    transform: translateZ(300px);
+}
+
+.back {
+    transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+}
+
+.left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+}
+
+.top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+}
+
+.bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+}
+
+
+@keyframes rotate {
+    from {
+    transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+    transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+#cube {
+  animation: rotate 20s infinite linear;
+}
+
+/* end 3DCube Transform*/
+
+
+#window {
+	position: absolute;
+	left: 10%;
+    top: 10%;
+    height: 400px;
+    width: 400px;
+    background-image: url(../images/PostGlacialUsedToDeathCoverArt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+}
+
+#window:hover{
+	position: absolute;
+	left: 10%;
+    top: 10%;
+    height: 400px;
+    width: 400px;
+    background-image: url(../images/PostGlacialUsedToDeathCoverArt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+#menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 25%;
+    width: 50%;
+}
+
+#menu .play{
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* portal.html */
+#headline {
+    position: fixed;
+    left: 0;
+    bottom: 10%;
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#forecast{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#forecast .greenspace{
+    color: lime;
+}
+
+/* full video link */
+
+.vidplay:link { 
+    color: white; text-decoration: none;
+}
+.vidplay:visited { 
+    color: white; text-decoration: none;
+}
+.vidplay:hover { 
+    color: #66ff99; text-decoration: none;
+}
+
+.vidplay:active { 
+    color: white; text-decoration: none;
+}
+
+/* sliding text headline */
+#headline h1 {
+  font-family: Helvetica;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 6em;
+  white-space: nowrap;
+
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+-moz-animation: scroll-left 8s linear infinite;
+-webkit-animation: scroll-left 8s linear infinite;
+animation: scroll-left 8s linear infinite;
+}
+
+@-moz-keyframes scroll-left {
+  0% {-moz-transform: translateX(100%);}
+  100% {-moz-transform: translateX(-100%);}
+}
+@-webkit-keyframes scroll-left {
+  0% {-webkit-transform: translateX(100%);}
+  100% {-webkit-transform: translateX(-100%);}
+}
+@keyframes scroll-left {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+100% {
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+}
+
+/* sliding text subline */
+#forecast h2 {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 3em;
+    white-space: nowrap;
+  
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  
+  -moz-animation: scroll-left 10s linear infinite;
+  -webkit-animation: scroll-left 10s linear infinite;
+  animation: scroll-left 10s linear infinite;
+  }
+  
+  @-moz-keyframes scroll-left {
+    0% {-moz-transform: translateX(100%);}
+    100% {-moz-transform: translateX(-100%);}
+  }
+  @-webkit-keyframes scroll-left {
+    0% {-webkit-transform: translateX(100%);}
+    100% {-webkit-transform: translateX(-100%);}
+  }
+  @keyframes scroll-left {
+    0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  }
+
+
+
+/* Tablet */
+
+@media screen and (max-width: 768px)
+{
+
+#container {
+    margin-top: 200px;
+}
+#cube {
+    height: 300px;
+    width: 300px;
+}
+
+.front  {transform: translateZ(200px);
+}
+}
+
+/* Smartphone Landscape */
+
+@media screen and (max-width: 480px)
+{
+
+#container {
+    margin-top: 150px;
+}
+
+#cube {
+    height: 200px;
+    width: 200px;
+}
+
+.front  {transform: translateZ(100px);
+}
+}
+
+/* Smartphone Portrait */
+
+@media screen and (max-width: 320px)
+{
+
+#container {
+    margin-top: 300px;
+}
+
+#cube {
+    height: 150px;
+    width: 150px;
+}
+
+.front  {transform: translateZ(50px);
+}
+}
+
+@media (min-aspect-ratio: 16/9){
+    .fullscreen-bg_video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .fullscreen-bg_video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
